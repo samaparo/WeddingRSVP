@@ -15,7 +15,7 @@ app.configure(function () {
 app.get('/answers', answerRoutes.findAll);
 app.get('/answers/:id', answerRoutes.findByID);
 app.post('/answers', answerRoutes.createAnswer);
-app.delete('/answers', answerRoutes.deleteAnswer);
+app.delete('/answers/:id', answerRoutes.deleteAnswer);
 
 app.listen(3000);
 console.log('Listening on port 3000...');

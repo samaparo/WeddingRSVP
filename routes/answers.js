@@ -94,6 +94,18 @@ exports.createAnswer = function (req, res) {
 
 exports.deleteAnswer = function (req, res) {
 	'use strict';
-	res.send({test: "test"});
+	
+	if (database !== undefined && database !== null) {
+		var searchID = req.params.id,
+			query = 'DELETE FROM ANSWERS WHERE ID=?';
+		
+		database.run(query, searchID, function (err) {
+			if (err) {
+				throw err;
+			}
+			res.send({SUCCESS: 'True'});
+		});
+	}
+	
 };
 
