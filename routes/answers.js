@@ -44,12 +44,52 @@ exports.findAll = function (req, res) {
 
 exports.findByID = function (req, res) {
 	'use strict';
-	res.send({test: "test"});
+	
+	if (database !== undefined && database !== null) {
+		var searchID = req.params.id,
+			query = 'SELECT * FROM ANSWERS WHERE ID=?';
+		
+		database.get(query, searchID, function (err, result) {
+			if (err) {
+				throw err;
+			}
+			
+			var foundAnswer = {};
+			if (result !== undefined) {
+				foundAnswer = result;
+			}
+			
+			res.send(foundAnswer);
+			
+		});
+	}
+	
+	
 };
 
 exports.createAnswer = function (req, res) {
 	'use strict';
-	res.send({test: "test"});
+	
+	if (database !== undefined && database !== null) {
+		var goingString = req.body.GOING,
+			going,
+			name = req.body.NAME,
+			email = req.body.EMAIL,
+			phone = req.body.PHONE,
+			message = req.body.MESSAGE,
+			query = 'INSERT INTO ANSWERS (GOING, NAME, EMAIL, PHONE, MESSAGE) VALUES (?, ?, ?, ?, ?)';
+		
+		going = goingString === 'YES' ? 1 : (goingString === 'NO' ? 0 : 2);
+		
+		database.run(query, going, name, email, phone, message, function (err) {
+			if (err) {
+				throw err;
+			}
+			res.send({NEW_ID: this.lastID});
+		});
+	}
+	
+	
 };
 
 exports.deleteAnswer = function (req, res) {
