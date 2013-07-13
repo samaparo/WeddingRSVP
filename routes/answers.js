@@ -73,10 +73,10 @@ exports.createAnswer = function (req, res) {
 	if (database !== undefined && database !== null) {
 		var goingString = req.body.GOING,
 			going,
-			name = req.body.NAME,
-			email = req.body.EMAIL,
-			phone = req.body.PHONE,
-			message = req.body.MESSAGE,
+			name = unescape(req.body.NAME),
+			email = unescape(req.body.EMAIL),
+			phone = unescape(req.body.PHONE),
+			message = unescape(req.body.MESSAGE),
 			query = 'INSERT INTO ANSWERS (GOING, NAME, EMAIL, PHONE, MESSAGE) VALUES (?, ?, ?, ?, ?)';
 		
 		going = goingString === 'YES' ? 1 : (goingString === 'NO' ? 0 : 2);

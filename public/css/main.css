@@ -1,0 +1,89 @@
+.mapImage 
+{
+	height: 180px;
+	width: 240px;
+}
+
+.boldLink 
+{
+	font-weight:bold;
+	color: #333;
+}
+
+.mainColumn
+{
+	padding-top:25px;
+}
+
+#static_container header
+{
+	padding-top:25px;
+	padding-bottom:25px;
+	text-align:center;
+}
+
+#static_container header img
+{
+	width:100%;
+	max-width:735px;
+	height:auto;
+}
+
+#rsvp_container header
+{
+	padding-top:25px;
+	text-align:center;
+}
+
+#rsvp_container header img
+{
+	width:100%;
+	max-width:400px;
+	height:auto;
+}
+
+body
+{
+	background: url('/img/pinkTile.jpg');
+}
+.container 
+{
+	background-color:white;
+	padding:0px 15px 0px 15px;
+}
+
+#rsvp_showForm 
+{
+	padding-top:25px;
+}
+#rsvp_showForm button
+{
+	font-size:24px;
+	width:100%; 
+}
+
+#rsvp_confirm
+{
+	padding-top:25px;
+	text-align:center;
+}
+
+#rsvp_confirm button
+{
+	font-size:24px;
+	width:100%; 
+}
+
+#rsvp_form
+{
+	margin-top:25px;
+}
+
+#rsvp_form .button
+{
+	font-size:13px;
+}
+#rsvp_form input, #rsvp_form textarea, #rsvp_form select
+{
+	width:100%;
+}
