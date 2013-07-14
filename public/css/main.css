@@ -87,3 +87,25 @@ body
 {
 	width:100%;
 }
+
+
+/* Admin Styles */
+
+#admin_mainWrap
+{
+	background-color:#FFFFFF;
+}
+
+#admin_mainTable
+{
+	width:100%;
+	border:solid 1px #D0D0D0;
+	border-spacing:0px;
+}
+
+#admin_mainTable td,#admin_mainTable th
+{
+	border:solid 1px #D0D0D0;
+	border-spacing:0px;
+	border-collapse:collapse;
+}

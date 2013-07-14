@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<link href="../css/main.css" rel="stylesheet" />
+	<title>Sam Loves Mary Ella dot Com</title>
+	
+</head>
+<body>
+	<div id="admin_mainWrap">
+	<h1>Responses So Far</h1>
+	<table id="admin_mainTable">
+		<tr>
+			<th>
+				<span>Name</span>
+			</th>
+			<th>
+				<span>Are they going?</span>
+			</th>
+			<th>
+				<span>Email</span>
+			</th>
+			<th>
+				<span>Phone</span>
+			</th>
+			<th>
+				<span>Message</span>
+			</th>
+		</tr>
+		<tbody id="admin_mainTableRows">
+		
+		</tbody>
+	</table>
+	
+	</div>
+		
+	<script id="template_answerRow" type="text/template">
+		<tr>
+			<td>
+				<span><%= NAME %></span>
+			</td>
+			<td>
+				<span><%= GOING %></span>
+			</td>
+			<td>
+				<span><%= EMAIL %></span>
+			</td>
+			<td>
+				<span><%= PHONE %></span>
+			</td>
+			<td>
+				<span><%= MESSAGE %></span>
+			</td>
+		</tr>
+	</script>
+	
+	<script type="text/javascript" src="../js/lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/admin.js"></script>
+	
+</body>
+</html>

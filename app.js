@@ -11,6 +11,7 @@ app.configure(function () {
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(express.static(__dirname + '/public'));
+	app.use(express.static('/admin/', __dirname + '/public/admin'));
 });
 
 app.get('/answers', answerRoutes.findAll);
@@ -18,5 +19,4 @@ app.get('/answers/:id', answerRoutes.findByID);
 app.post('/answers', answerRoutes.createAnswer);
 app.delete('/answers/:id', answerRoutes.deleteAnswer);
 
-app.listen(3000);
-console.log('Listening on port 3000...');
+app.listen(8000);
