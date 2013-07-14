@@ -46,7 +46,7 @@
 		rsvp_going = $("#rsvp_going option:selected").val();
 		
 		$.ajax({
-			url: 'http://localhost:3000/answers/',
+			url: '/answers/',
 			type: 'POST',
 			data: {
 				NAME: rsvp_name,
