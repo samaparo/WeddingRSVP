@@ -26,6 +26,12 @@
 			<img src='/img/logo.png' />
 		</header>
 		
+		<section class="sixteen columns">
+			<div id="rsvpTopButton">
+				<img src='/img/rsvpTop.png' />
+			</div>
+		</section>
+		
 		<section class="one-third column mainColumn">
 			<h3>The Ceremony</h3>
 			<!--<img src="img/churchSmall.jpg" />-->
@@ -77,8 +83,10 @@
 		
 	
 		
-		<div id="rsvp_showForm" class="eight columns offset-by-four">
-			<button>RSVP Today</button>
+		<div id="rsvp_showForm" class="sixteen columns">
+			<div id="rsvpBottomButton">
+				<img src='/img/rsvpBottom.png' />
+			</div>
 		</div>
 		
 	</div>
@@ -98,7 +106,6 @@
 			<select id="rsvp_going">
 				<option value="YES">Yes, I happily accept.</option>
 				<option value="NO">No, I must regrettably decline.</option>
-				<option value="NOTSURE">I am as of yet undecided.</option>
 			</select>
 			
 			<h5>Email Address</h5>
@@ -107,15 +114,18 @@
 			<input id="rsvp_phone" type="text" />
 			<h5>Questions or Comments</h5>
 			<textarea id="rsvp_message"></textarea>
-			<a href='#' id="rsvp_submit" class="button">Respond</a>
+			<a href="#" id="rsvp_submit" class="button">Respond</a>
+			<a href="#" id="rsvp_cancel">Return to Home Page</a>
 		</section>
 		
 		<section id="rsvp_confirm" class="eight columns offset-by-four">
 			
 			<h3>Thanks for replying!</h3>
 			
-			<button>Return To Home Page</button>
-			
+			<h4>
+				<a href="#">Return To Home Page</a>
+			</h4>
+				
 		</section>
 
 	</div>

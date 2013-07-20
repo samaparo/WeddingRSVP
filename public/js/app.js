@@ -8,9 +8,9 @@
 	$("#static_container").css("display", "block");
 	
 	//Show Form Behavior
-	$("#rsvp_showForm button").on("click", function (e) {
+	$("#rsvpBottomButton, #rsvpTopButton").on("click", function (e) {
 		
-		$("#rsvp_form input").val("");
+		$("#rsvp_form input, #rsvp_form textarea").val("");
 		$("#rsvp_form select option").eq(0).attr("selected", "selected");
 		
 		$("#rsvp_confirm").css("display", "none");
@@ -18,16 +18,10 @@
 		
 		$("#rsvp_container").css("display", "block");
 		$("#static_container").css("display", "none");
-		
-		
-		
-		//debug
-		//$("#rsvp_confirm").css("display", "block");
-		//$("#rsvp_form").css("display", "none");
 	});
 	
 	//Hide Form Behavior
-	$("#rsvp_confirm button").on("click", function (e) {
+	$("#rsvp_confirm a, #rsvp_cancel").on("click", function (e) {
 		
 		$("#rsvp_container").css("display", "none");
 		$("#static_container").css("display", "block");

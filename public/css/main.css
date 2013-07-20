@@ -52,15 +52,20 @@ body
 	padding:0px 15px 0px 15px;
 }
 
-#rsvp_showForm 
+#rsvpTopButton
 {
-	padding-top:25px;
+	margin:10px auto 20px auto;
+	width: 289px;
+	cursor:pointer;
 }
-#rsvp_showForm button
+
+#rsvpBottomButton
 {
-	font-size:24px;
-	width:100%; 
+	margin:10px auto 20px auto;
+	width: 289px;
+	cursor:pointer;
 }
+
 
 #rsvp_confirm
 {
@@ -77,6 +82,11 @@ body
 #rsvp_form
 {
 	margin-top:25px;
+}
+
+#rsvp_form a
+{
+	padding-left:15px;
 }
 
 #rsvp_form .button
